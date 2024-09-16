@@ -9,10 +9,27 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Image.asset('assets/image.png'),
+              ),
+              Expanded(
+                flex: 2,
+                child: Image.asset('assets/image.png'),
+              ),
+              Expanded(
+                flex: 1,
+                child: Image.asset('assets/image.png'),
+              ),
+            ],
+          ),
         ),
       ),
     );
